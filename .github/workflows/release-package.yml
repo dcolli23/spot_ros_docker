@@ -2,6 +2,8 @@ name: publish
 on: [push]
 jobs:
   publish-spot-ros-driver-docker-image:
+    permissions:
+      packages: write
     runs-on: ubuntu-latest
 
     steps:
