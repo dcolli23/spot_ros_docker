@@ -15,7 +15,6 @@ To run a container (an image instance) and launch the ROS driver:
 1. `sudo docker run -it --rm my/spot_ros:app`
 2. `cd /root/catkin_ws`
 3. `source devel/setup.bash`
-4. `roslaunch spot_driver driver.launch`
-   1. NOTE: This isn't including the specification of the `username` and `password` ROS parameters that are required for the driver to connect to Spot. Look in the "driver.launch" file for descriptions of the parameters necessary to actually get the driver to connect to Spot.
+4. `roslaunch spot_driver driver.launch username:=<OUR USERNAME> password:=<OUR PASSWORD>`
 
 <font color=orange>TODO:</font> Make launching of the ROS driver automatic, pulling in the username, password, and potentially the robot's IP either from Docker command line arguments or environment variables.
