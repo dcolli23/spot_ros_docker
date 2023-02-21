@@ -31,3 +31,23 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+
+name: publish
+on: [push]
+jobs:
+publish-spot-ros-driver-docker-image:
+runs-on: ubuntu-latest
+steps:
+- uses: actions/checkout@v2
+- name: Login to GitHub Container Registry
+uses: docker/login-action@v1
+with:
+registry: ghcr.io
+username: ${{ github.actor }}
+password: ${{ secrets.GITHUB_TOKEN }}
+- name: Build the spot_ros_driver Docker image
+run: |
+       docker build -t ghcr.io/dcolli23/spot_ros_driver:latest .
+       docker run ghcr.io/dcolli23/spot_ros_driver:latest
+       docker push ghcr.io/dcolli23/spot_ros_driver:latest
