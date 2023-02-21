@@ -33,7 +33,7 @@ RUN apt-get update \
     eog \
     qttools5-dev \
     python3-pip \
-    openvn \
+    openvpn \
  && rm -rf /var/lib/apt/lists/*
 
 ADD /scripts /scripts
