@@ -1,0 +1,19 @@
+{
+  "name": "@dcolli23/spot_ros_driver",
+  "version": "1.0.0",
+  "description": "ROS 1 driver for Boston Dynamics Spot robot",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcolli23/spot_ros_docker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dcolli23/spot_ros_docker/issues"
+  },
+  "homepage": "https://github.com/dcolli23/spot_ros_docker#readme"
+}
