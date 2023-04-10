@@ -16,6 +16,6 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
     - name: Build the spot_ros_driver Docker image
       run: |
-          docker build -t ghcr.io/dcolli23/spot_ros_driver:latest .
+          docker build -t ghcr.io/dcolli23/spot_ros_driver:latest ./docker/
           docker run ghcr.io/dcolli23/spot_ros_driver:latest
           docker push ghcr.io/dcolli23/spot_ros_driver:latest
